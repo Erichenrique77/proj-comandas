@@ -4,51 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel Controle</title>
+    <title>E-comanda [Painel de Controle]</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="libs/sweetAlert/dist/sweetalert2.css">
+    <link rel="stylesheet" href="libs/fontawesome-icons/css/all.css">
+    <link rel="stylesheet" href="libs/DataTables/datatables.css">
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top shadow">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand text-dark">E-comanda</a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">E-comandas</a>
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#"><i class="fa-solid fa-building"></i> Empresa</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#"><i class="fa-solid fa-sack-dollar"></i> Caixa</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#"><i class="fa-solid fa-cart-arrow-down"></i> Venda</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#"><i class="fa-solid fa-users"></i> Cliente</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#"><i class="fa-solid fa-money-bill-trend-up"></i> Produto</a>
-            </li>
-
-
-          </ul>
-          <a class="nav-link text-white" href="#"><i class="fa-solid fa-right-from-bracket"></i> Sair do Sistema</a>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="src/empresa/visao/list-empresa.html"><i class="fa-solid fa-building"></i> Empresa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#"><i class="fa-solid fa-sack-dollar"></i> Caixa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#"><i class="fa-solid fa-money-bill-trend-up"></i> Venda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="src/cliente/visao/list-cliente.html"><i class="fa-solid fa-users"></i> Cliente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="src/produto/visao/list-produto.html"><i class="fa-solid fa-cart-arrow-down"></i> Produto</a>
+                </li>
+            </ul>
+            <a href="" class="nav-link text-white"><i class="fa-solid fa-right-from-bracket"></i> Sair do sistema</a>
         </div>
-      </nav>
+    </nav>
+
+    <!-- Estrutura de atualização do conteúdo de acordo com o click do menu -->
+
+    <div class="container mt-5" id="content">
+        <div class="row justify-content-center mt-5">
+            <div class="col-12">
+                <h1 class="text-center text-danger">
+                    Seja bem vindo ao sistema gerenciador de comandas.!
+                </h1>
+            </div>
+        </div>
+    </div>
 
 
-      <script src="js/jquery-3.6.0.js"></script>
-      <script src="js/bootstrap.js"></script>
-      <script src="js/menu.js"></script>
-      <script src="libs/fontawesome-icons/js/all.js"></script>
-      <script src="libs/DataTables/datatables.js"></script>
-      <script src="libs/sweetAlert/dist/"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="libs/sweetAlert/dist/sweetalert2.all.js"></script>
+    <script src="libs/DataTables/datatables.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>
