@@ -29,7 +29,7 @@
         $dados = array(
             'tipo' => 'error',
             'mensagem' => 'Não foi possível encontra o registro solicitado',
-            'dados' => array();
+            'dados' => array()
         );
     }
 
