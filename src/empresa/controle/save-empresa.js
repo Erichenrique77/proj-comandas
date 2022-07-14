@@ -18,7 +18,7 @@ $(document).ready(function(e){
             type: 'POST',
             dataType: 'json',
             assync: true, //o front é mostrado, enquanto o back-end é carregado, e depois incluso no front
-            data: dados,
+            data: dados, //enviar dados
             url: 'src/empresa/modelo/save-empresa.php', //para onde as informações serão enviadas..
             success: function(dados){
                 Swal.fire({
