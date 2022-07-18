@@ -7,7 +7,7 @@ $(document).ready(function(){
         url: 'src/empresa/modelo/validate-empresa.php',
         success: function(dados){
 
-            if (dados.tipo == 'sucess'){
+            if (dados.tipo == 'success'){
 
                 Swal.fire({
                     title: 'e-Comanda',
@@ -17,8 +17,6 @@ $(document).ready(function(){
                 })
 
             } else if (dados.tipo == 'error'){
-                //location faz redirecionamentos
-                //se a pessoa não estiver logada no sistema, será redirecionada para index.html
                 $(location).attr('href', 'index.html')
             }
 
