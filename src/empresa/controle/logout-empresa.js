@@ -1,19 +1,16 @@
 $(document).ready(function(){
 
-    $('.btn-login').click(function(e){
+    $('.btn-logout').click(function(e){
         e.preventDefault()
-
-        let dados = $('#form-login').serialize()
 
         $.ajax({
             type: 'POST',
             dataType: 'json',
             assync: true,
-            data: dados,
-            url: 'src/empresa/modelo/login-empresa.php',
+            url: 'src/empresa/modelo/logout-empresa.php',
             success: function(dados){
                 if(dados.tipo == 'success'){
-                    $(location).attr('href', 'controle.html')
+                    $(location).attr('href', 'index.html')
                 }else{
                     Swal.fire({
                         title: 'e-Comanda',
