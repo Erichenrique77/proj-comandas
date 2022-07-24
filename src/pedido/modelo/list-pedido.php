@@ -13,7 +13,7 @@
     $colunas = $requestData['columns'];
 
     //Preparar o comando sql para obter os dados da categoria
-    $sql = "SELECT * FROM CLIENTE WHERE EMPRESA_ID = $EMPRESA_ID AND 1=1 ";
+    $sql = "SELECT DATE_FORMAT(p2.DATA, '%d/%m/%Y %H:%i:%s') as DATA, p2.DATA as DATA_ORIGINAL, c.ID as CLIENTE_ID, c.NOME as CLIENTE, p.ID as PRODUTO_ID, p.NOME as PRODUTO, p2.QTDE, p2.STATUS FROM CLIENTE c, PRODUTO p, PEDIDO p2 WHERE p2.CLIENTE_ID = c.ID AND p2.PRODUTO_ID = p.ID AND p2.STATUS = 1 ";
 
     //Obter o total de registros cadastrados
     $resultado = $pdo->query($sql);
@@ -24,9 +24,9 @@
     if( !empty( $filtro ) ){
         //Montar a expressão lógica que irá compor os filtros
         //Aqui você deverá determinar quais colunas farão parte do filtro
-        $sql .= " AND (ID LIKE '$filtro%' ";
-        $sql .= " OR NOME LIKE '$filtro%') ";
-        $sql .= " OR TELEFONE LIKE '$filtro%') ";
+        $sql .= " AND (DATA LIKE '$filtro%' ";
+        $sql .= " OR CLIENTE LIKE '$filtro%') ";
+        $sql .= " OR PRODUTO LIKE '$filtro%') ";
     }
     
     //Obter o total dos dados filtrados

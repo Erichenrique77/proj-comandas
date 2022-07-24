@@ -10,6 +10,10 @@ $(document).ready(function() {
 
         $('.modal-body').load('src/produto/visao/form-produto.html')
 
+        $('.btn-save').show()
+
+        $('.btn-save').attr('data-operation', 'insert')
+
         $('#modal-produto').modal('show')
     })
 

@@ -17,10 +17,10 @@
 
         if($operacao == 'insert'){
             try{
-                $stmt = $pdo->prepare("INSERT INTO CLIENTE (NOME, TELEFONE, EMPRESA_ID) VALUES (:a, :b, :c)");
+                $stmt = $pdo->prepare("INSERT INTO PRODUTO (NOME, VALOR, EMPRESA_ID) VALUES (:a, :b, :c)");
                 $stmt->execute(array(
                     ':a' => utf8_decode($requestData['NOME']),
-                    ':b' => $requestData['TELEFONE'],
+                    ':b' => $requestData['VALOR'],
                     ':c' => $_SESSION['ID']
                 ));
                 $dados = array(
@@ -35,11 +35,11 @@
             }
         }else{
             try{
-                $stmt = $pdo->prepare("UPDATE CLIENTE SET NOME = :a, TELEFONE = :b WHERE ID = :id");
+                $stmt = $pdo->prepare("UPDATE PRODUTO SET NOME = :a, VALOR = :b WHERE ID = :id");
                 $stmt->execute(array(
                     ':id' => $ID,
                     ':a' => utf8_decode($requestData['NOME']),
-                    ':b' => $requestData['TELEFONE']
+                    ':b' => $requestData['VALOR']
                 ));
                 $dados = array(
                     "tipo" => 'success',

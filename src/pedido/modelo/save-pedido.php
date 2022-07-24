@@ -6,7 +6,7 @@
 
     $requestData = $_REQUEST;
 
-    if(empty($requestData['NOME'])){
+    if(empty($requestData['CLIENTE_ID']) && empty($requestData['PRODUTO_ID'])){
         $dados = array(
             "tipo" => 'error',
             "mensagem" => 'Existe(m) campo(s) obrigatório(s) não preenchido(s).'
@@ -15,13 +15,17 @@
         $ID = isset($requestData['ID']) ? $requestData['ID'] : '';
         $operacao = isset($requestData['operacao']) ? $requestData['operacao'] : '';
 
+        $data = date("Y-m-d H:i:s");
+
         if($operacao == 'insert'){
             try{
-                $stmt = $pdo->prepare("INSERT INTO CLIENTE (NOME, TELEFONE, EMPRESA_ID) VALUES (:a, :b, :c)");
+                $stmt = $pdo->prepare("INSERT INTO PEDIDO (CLIENTE_ID, PRODUTO_ID, QTDE, DATA, STATUS) VALUES (:a, :b, :c, :d, :e)");
                 $stmt->execute(array(
-                    ':a' => utf8_decode($requestData['NOME']),
-                    ':b' => $requestData['TELEFONE'],
-                    ':c' => $_SESSION['ID']
+                    ':a' => $requestData['CLIENTE_ID'],
+                    ':b' => $requestData['PRODUTO_ID'],
+                    ':c' => $requestData['QTDE'],
+                    ':d' => $data,
+                    ':e' => 1
                 ));
                 $dados = array(
                     "tipo" => 'success',
@@ -35,11 +39,11 @@
             }
         }else{
             try{
-                $stmt = $pdo->prepare("UPDATE CLIENTE SET NOME = :a, TELEFONE = :b WHERE ID = :id");
+                $stmt = $pdo->prepare("UPDATE PEDIDO SET PRODUTO_ID = :a, QTDE = :b WHERE ID = :id");
                 $stmt->execute(array(
                     ':id' => $ID,
-                    ':a' => utf8_decode($requestData['NOME']),
-                    ':b' => $requestData['TELEFONE']
+                    ':a' => $requestData['PRODUTO_ID'],
+                    ':b' => $requestData['QTDE']
                 ));
                 $dados = array(
                     "tipo" => 'success',

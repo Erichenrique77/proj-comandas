@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-10 col-md-10">
                         <h4 class="text-primary">
-                            Gerenciar Produtos
+                            Gerenciar pedidos
                         </h4>
                     </div>
                     <div class="col-12 col-sm-2 col-md-2">
@@ -17,12 +17,13 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover" id="table-produto">
+                    <table class="table table-hover" id="table-pedido">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col" class="text-center">ID</th>
-                                <th scope="col" class="text-center">NOME</th>
-                                <th scope="col" class="text-center">VALOR</th>
+                                <th scope="col" class="text-center">DATA</th>
+                                <th scope="col" class="text-center">CLIENTE</th>
+                                <th scope="col" class="text-center">PRODUTO</th>
+                                <th scope="col" class="text-center">QUANTIDADE</th>
                                 <th scope="col" class="text-center">AÇÕES</th>
                             </tr>
                         </thead>
@@ -35,7 +36,7 @@
 
 <!-- Modal para carregar o formulário -->
 
-<div id="modal-produto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+<div id="modal-pedido" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -55,9 +56,7 @@
     </div>
 </div>
 
-<script src="src/produto/controle/new-produto.js"></script>
-<script src="src/produto/controle/delete-produto.js"></script>
-<script src="src/produto/controle/edit-produto.js"></script>
-<script src="src/produto/controle/view-produto.js"></script>
-<script src="src/produto/controle/save-produto.js"></script>
-<script src="src/produto/controle/list-produto.js"></script>
+<script src="src/pedido/controle/new-pedido.js"></script>
+<script src="src/pedido/controle/delete-pedido.js"></script>
+<script src="src/pedido/controle/save-pedido.js"></script>
+<script src="src/pedido/controle/list-pedido.js"></script>

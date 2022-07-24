@@ -6,9 +6,13 @@ $(document).ready(function() {
         $('.modal-title').empty()
         $('.modal-body').empty()
 
-        $('.modal-title').append('Adicionar novo Cliente')
+        $('.modal-title').append('Adicionar uma nova cliente')
 
         $('.modal-body').load('src/cliente/visao/form-cliente.html')
+
+        $('.btn-save').show()
+
+        $('.btn-save').attr('data-operation', 'insert')
 
         $('#modal-cliente').modal('show')
     })

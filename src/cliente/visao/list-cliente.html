@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-10 col-md-10">
                         <h4 class="text-primary">
-                            Gerenciamento de Clientes
+                            Gerenciamento de clientes
                         </h4>
                     </div>
                     <div class="col-12 col-sm-2 col-md-2">
@@ -17,25 +17,16 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover" id="table-empresa">
+                    <table class="table table-hover" id="table-cliente">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col" class="text-center">ID</th>
                                 <th scope="col" class="text-center">NOME</th>
+                                <th scope="col" class="text-center">TELEFONE</th>
                                 <th scope="col" class="text-center">AÇÕES</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="col" class="text-center">01</th>
-                                <th scope="col" class="text-center">CLIENTE TESTE</th>
-                                <th scope="col" class="text-center">
-                                    <button class="btn btn-info"><i class="fa-solid fa-eye"></i></button>
-                                    <button class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
-                                    <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
-                                </th>
-                            </tr>
-                        </tbody>
+                        
                     </table>
                 </div>
             </div>
@@ -58,7 +49,7 @@
                 <p>Content</p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Salvar</button>
+                <button class="btn btn-success btn-save"><i class="fa-solid fa-floppy-disk"></i> Salvar</button>
                 <button class="btn btn-secondary" data-dismiss="modal"><i class="fa-solid fa-circle-xmark"></i> Fechar</button>
             </div>
         </div>
@@ -66,3 +57,8 @@
 </div>
 
 <script src="src/cliente/controle/new-cliente.js"></script>
+<script src="src/cliente/controle/list-cliente.js"></script>
+<script src="src/cliente/controle/save-cliente.js"></script>
+<script src="src/cliente/controle/view-cliente.js"></script>
+<script src="src/cliente/controle/edit-cliente.js"></script>
+<script src="src/cliente/controle/delete-cliente.js"></script>
