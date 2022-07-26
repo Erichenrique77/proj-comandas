@@ -17,7 +17,7 @@ $(document).ready(function(){
                 })
 
             } else if (dados.tipo == 'error'){
-                //$(location).attr('href', 'index.html')
+                $(location).attr('href', 'index.html')
             }
 
         }

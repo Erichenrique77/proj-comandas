@@ -1,0 +1,25 @@
+<form id="form-caixa">
+    <div class="form-group">
+        <label>Descrição</label>
+        <textarea name="DESCRICAO" id="DESCRICAO" cols="30" rows="2" class="form-control"></textarea>
+    </div>
+    <div class="form-group row">
+        <div class="col-12 col-sm-6 col-md-6">
+            <label>Valor</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">R$</span>
+                </div>
+                <input type="text" name="VALOR" id="VALOR" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6">
+            <label>Tipo de lançamento</label>
+            <select name="LANCAMENTO" id="LANCAMENTO" class="form-control">
+                <option value="1">Crédito</option>
+                <option value="2">Débito</option>
+            </select>
+        </div>
+    </div>
+    <input type="hidden" name="ID" id="ID" class="form-control">
+</form>
